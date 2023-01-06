@@ -1,8 +1,14 @@
 version: "3"
 
 services:
-  bitto.website:
-    image: bitto.website
+  deployer-test:
+    container_name: deployer-test
+      build:
+        context: ./
+        dockerfile: Dockerfile
+        args:
+          DEPLOY_ENV: ".env"
+    image: deployer-test
     restart: always
     network_mode: bridge
     ports:
