@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  bitto.website:
+    image: bitto.website
+    restart: always
+    network_mode: bridge
+    ports:
+      - "5050:5050"
